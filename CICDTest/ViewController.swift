@@ -6,14 +6,24 @@
 //
 
 import UIKit
+import AppCenterCrashes
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Crashes.hasCrashedInLastSession {
+            let alertVC = UIAlertController(title: "Error", message: "Sorry", preferredStyle: .alert)
+            alertVC.addAction(UIAlertAction(title: "OK", style: .cancel))
+            present(alertVC, animated: true)
+        }
+    }
+    
+    @IBAction func clickToCrash(_ sender: Any) {
+        Crashes.generateTestCrash()
+    }
 }
 
