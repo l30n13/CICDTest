@@ -14,7 +14,7 @@ import AppCenterAnalytics
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
-    let APP_SECRECT_APP_CENTER = "d4ebf310-8fa7-4849-9879-bd1462a3c41f"
+    let APP_SECRECT_APP_CENTER = "48d3d2df-b6e8-446a-a1c1-a88c9656b654"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
